@@ -1,0 +1,4 @@
+[Journal]
+{% for k, v in systemd_journal_remote_config.items() %}
+{{k}}={{v}}
+{% endfor %}
