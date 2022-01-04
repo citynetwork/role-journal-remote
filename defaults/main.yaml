@@ -16,7 +16,8 @@
 journal_remote_package_state: "latest"
 
 journal_remote_target_group: "log_hosts"
-journal_remote_targets: "{{ groups[journal_remote_target_group] }}"
+
+journal_remote_targets: []
 
 journal_remote_local_directory: "/var/log/journal"
 journal_remote_remote_directory: "{{ journal_remote_local_directory }}/remote"

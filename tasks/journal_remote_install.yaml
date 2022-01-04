@@ -15,8 +15,8 @@
 
 - name: Install systemd-journal-remote
   ansible.builtin.package:
-    name: "{{ systemd_journal_remote_distro_package }}"
-    state: "{{ package_state }}"
+    name: "{{ journal_remote_distro_package }}"
+    state: "{{ journal_remote_package_state }}"
 
 - name: Ensure systemd-journal-remote socket is enabled on receiving hosts
   ansible.builtin.systemd:
@@ -39,5 +39,3 @@
     state: "directory"
     owner: "systemd-journal-remote"
     group: "systemd-journal"
-
-  
