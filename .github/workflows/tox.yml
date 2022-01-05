@@ -1,5 +1,5 @@
 ---
-name: Test with tox
+name: build
 'on':
   - push
   - pull_request
