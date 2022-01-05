@@ -1,0 +1,11 @@
+---
+
+users_groups:
+  - name: foo
+    user: false
+users_accounts:
+  - name: bar
+  - name: foo2
+    groups: ["sudo"]
+    sshkeys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/5/DbscfqpJHgkqMvXWjOFmatuBAFRNmBrzM90k+2MSxmSEx/8IIEwoDxis6JfwdsYeAJjdAV+LOQ1neo3Qb09c8ib4ZXQbSQoEtFvT3wDb3badKROeY2GsJjNfwOasAv6fVvwdkbpt0IgR5yd9GfA2C+4DOizgrVnhjpQwgSOwQ74EJ9B0/zVoXUXw1pSRIxOxsxfdOFfMYKfWUKnDfGM8XXVqBDhnkL85CbGXo7vtQDzmIqXn8TWdhfqlhLXZrCCrKfX3mhpDfFARo/yFdbcKqpy7DbGHB1lHAFkke2QR/Dc+tLMrpn7EBdQVZIL0/rFLBj6CxUTDX2bTgUTKInciDn71jhm3A/Eiz9AEhnt0zlGpFVvm1FTz6Q8wtQQhUK2eXfCJIP/d7HgXWj5XNvMk8nyYnX0vIYxm4bwZRBR91mH0YTO8tFSBgDcqxTjVdEvWlpofoB/5dHJSZO/2UkbkSVAxwLKP5wGEWUaTcDgtWaAe81WLtVtA4ItpGui1M= test  # yamllint disable-line rule:line-length

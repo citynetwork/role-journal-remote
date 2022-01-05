@@ -4,7 +4,7 @@ name: Test with tox
   - push
   - pull_request
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,4 +24,28 @@ jobs:
         run: |
           pip install tox tox-gh-actions
       - name: Test with tox
-        run: tox
+        run: tox -e linters
+
+  molecule:
+    name: Molecule
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro:
+          - ubuntu2004
+          - ubuntu1804
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Run Molecule tests with tox.
+        run: tox -e molecule
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
