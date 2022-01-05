@@ -43,6 +43,10 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install dependencies
+        run: |
+          pip install tox tox-gh-actions
+
       - name: Run Molecule tests with tox.
         run: tox -e molecule
         env:
