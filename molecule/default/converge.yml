@@ -4,4 +4,5 @@
   roles:
     - role: role-journal-remote
       vars:
-        journal_remote_targets: "{{ hostvars['test-instance']['ansible_default_ipv4']['address']}}"  # yamllint disable-line rule:line-length
+        journal_remote_targets: 
+          - "{{ hostvars['test-instance']['ansible_default_ipv4']['address']}}"  # yamllint disable-line rule:line-length
