@@ -21,6 +21,14 @@
 
 - name: Restart systemd-journald-remote
   ansible.builtin.systemd:
-    name: systemd-journald-remote
+    name: systemd-journal-remote
+    enabled: true
+    state: restarted
+    daemon_reload: true
+
+- name: Restart systemd-journald-upload
+  ansible.builtin.systemd:
+    name: systemd-journal-upload
+    enabled: true
     state: restarted
     daemon_reload: true

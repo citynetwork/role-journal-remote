@@ -38,4 +38,4 @@
     path: "{{ journal_remote_remote_directory }}"
     state: "directory"
     owner: "systemd-journal-remote"
-    group: "systemd-journal"
+    group: "systemd-journal-remote"

@@ -6,7 +6,7 @@ driver:
 platforms:
   - name: test-instance
     image: geerlingguy/docker-${MOLECULE_DISTRO}-ansible
-    pre_build_image: true
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true

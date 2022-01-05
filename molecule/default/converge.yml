@@ -1,13 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  pre_tasks:
-    - name: Refresh apt cache
-      apt:
-        update_cache: true
   roles:
     - role: role-journal-remote
       vars:
-        journal_remote_targets: "{{ hostvars['test-instance']['ansible_default_ipv4']['address']}}"
-
-
+        journal_remote_targets: "{{ hostvars['test-instance']['ansible_default_ipv4']['address']}}"  # yamllint disable-line rule:line-length

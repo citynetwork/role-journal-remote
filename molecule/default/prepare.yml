@@ -1,0 +1,7 @@
+---
+
+- hosts: all
+  pre_tasks:
+    - name: Refresh apt cache
+      apt:
+        update_cache: true
