@@ -15,6 +15,12 @@
 
 
 - name: Restart systemd-journald
-  systemd:
+  ansible.builtin.systemd:
     name: systemd-journald
     state: restarted
+
+- name: Restart systemd-journald-remote
+  ansible.builtin.systemd:
+    name: systemd-journald-remote
+    state: restarted
+    daemon_reload: true

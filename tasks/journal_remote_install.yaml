@@ -21,7 +21,7 @@
 - name: Ensure systemd-journal-remote socket is enabled on receiving hosts
   ansible.builtin.systemd:
     name: systemd-journal-remote.socket
-    enabled: yes
+    enabled: true
     state: started
   when:
     - "journal_remote_target_group in group_names"
